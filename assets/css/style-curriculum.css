@@ -295,6 +295,49 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/*--------------------------------------------------------------
+# Breadcrumbs
+--------------------------------------------------------------*/
+.breadcrumbs {
+  padding: 0;
+}
+
+.breadcrumbs .breadcrumb-hero {
+  text-align: center;
+  background: #E92536;
+  padding: 20px 0;
+  padding-top: 30px;
+  color: #fff;
+}
+
+.breadcrumbs .breadcrumb-hero h2 {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.breadcrumbs .breadcrumb-hero p {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+}
+
+.breadcrumbs ol li + li {
+  padding-left: 10px;
+}
+
+.breadcrumbs ol li + li::before {
+  display: inline-block;
+  padding-right: 10px;
+  color: #E92536;
+  content: "/";
+}
 
 
 /*--------------------------------------------------------------
