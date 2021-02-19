@@ -1,56 +1,24 @@
 <template>
-  <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-main>
-      <HelloWorld/>
-    </v-main>
+  <v-app style="
+  background: #3A1C71;
+  background: -webkit-linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71);
+  background: linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71);
+/*  credits: User Blue Frog from https://stackoverflow.com/questions/50243769/vuetify-how-to-set-background-color*/
+  min-width: 856px;
+/*  todo fix sizing error when resizing window*/
+"
+  >
+    <router-view></router-view>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
   },
 
   data: () => ({
@@ -58,3 +26,6 @@ export default {
   }),
 };
 </script>
+
+<style>
+</style>
