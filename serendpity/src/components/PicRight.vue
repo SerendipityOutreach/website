@@ -7,7 +7,7 @@
             dark
             height="100%"
         >
-          <v-card-title class="headline text-h3" style="flex-direction: row-reverse">
+          <v-card-title class="headline text-h3" style="">
             {{ this.title }}
           </v-card-title>
 
