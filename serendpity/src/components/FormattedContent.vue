@@ -13,7 +13,7 @@
       <PicRight
           v-if="description.type === `RightPic`"
           :content="description"
-          style="margin-bottom: 10px"
+          style="margin-bottom: 25px"
       ></PicRight>
 
       <MultiPanel
