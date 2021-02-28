@@ -26,4 +26,6 @@ const router = new VueRouter({
   routes
 })
 
+document.title = "Serendipity STEM"
+
 export default router
