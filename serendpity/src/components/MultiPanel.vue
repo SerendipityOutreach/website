@@ -7,7 +7,7 @@
             dark
             height="100%"
         >
-          <!--          :img="require(`@/assets/img/${this.content.image}`)"-->
+<!--          :img="require(`@/assets/img/${this.content.image}`)"    -->
           <v-row>
             <v-col v-for="i in 3" :key="i" cols="4">
               <v-card-title v-if="i===2" class="text-h3 ml-7" v-text="content.title"></v-card-title>

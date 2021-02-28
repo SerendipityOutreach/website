@@ -12,15 +12,14 @@ const OurMission = {
     type: "RightPic",
     title: "Our Mission",
     image: "Brain.jpg",
-    color: "blue darken-1",
+    color: "red darken-1",
     description: "Our goal is to provide sustainable STEM opportunities for Special Education students in the form of Robotics and Coding",
 }
-
 const OurPassion = {
     type: "TripleView",
     title: "Our Passion",
     image: "Bridge.jpg",
-    color: "orange darken-2",
+    color: "orange darken-1",
     descriptions: [
         "Although Silicon Valley is the heart of technology, Special Education students do not have the same access to STEM opportunities as General Education students.",
         "Although Silicon Valley is the heart of technology, Special Education students do not have the same access to STEM opportunities as General Education students.",
