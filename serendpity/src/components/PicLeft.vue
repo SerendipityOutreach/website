@@ -18,8 +18,10 @@
             {{ this.content.title }}
           </v-card-title>
 
-          <v-card-subtitle class="headline text-h6" style="margin-top: 10px">
+          <v-card-subtitle class="headline text-h6 white--text" style="margin-top: 10px">
             {{ this.content.description }}
+            <!--            Just a jank spacer    --> <p></p>
+            {{ this.content.description_2 }}
           </v-card-subtitle>
         </v-card>
       </v-col>

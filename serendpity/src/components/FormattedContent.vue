@@ -26,7 +26,6 @@ export default {
   name: "FormattedContent",
   props: {
     content_list: Array,
-    max_height: String,
   },
   components: {PicRight, PicLeft}
 }
