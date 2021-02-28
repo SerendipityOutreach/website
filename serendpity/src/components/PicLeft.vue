@@ -1,6 +1,5 @@
 <template>
   <div>
-    <p>2/3 and 1/3 template</p>
 
     <v-row no-gutters>
       <v-col cols="7">
@@ -15,18 +14,13 @@
             dark
             height="100%"
         >
-          <v-card-title class="headline " style="flex-direction: row-reverse">
-            Unlimited music now
+          <v-card-title class="headline text-h3" style="flex-direction: row-reverse">
+            {{ this.title }}
           </v-card-title>
 
-          <v-card-subtitle>Listen to your favorite artists and albums whenever and wherever, online and offline.
+          <v-card-subtitle class="headline text-h6" style="margin-top: 10px">
+            {{ this.description }}
           </v-card-subtitle>
-
-          <v-card-actions>
-            <v-btn text>
-              Listen Now
-            </v-btn>
-          </v-card-actions>
         </v-card>
       </v-col>
 
@@ -41,6 +35,8 @@ export default {
 
   props: {
     image_input: String,
+    title: String,
+    description: String,
   },
 
   data() {

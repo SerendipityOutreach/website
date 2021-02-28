@@ -1,25 +1,26 @@
 <template>
-  <div>
-    <AboutUs :image_input="`FullLogo`"></AboutUs>
-  </div>
+  <v-container>
+    <About></About>
+  </v-container>
 </template>
 
 <script>
-// @ is an alias to /src\
-
-import PicLeft from "@/components/PicLeft";
+import About from "@/views/sub_views/About"
+import {descriptions} from "@/assets/Descriptions";
 
 export default {
   name: 'Home',
 
   components: {
-    AboutUs: PicLeft,
+    About
   },
 
   props: {},
 
   data() {
-    return {}
+    return {
+      website_content: descriptions,
+    }
   }
 }
 </script>
