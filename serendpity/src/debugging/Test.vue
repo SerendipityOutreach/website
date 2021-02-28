@@ -1,35 +1,34 @@
 <template>
   <div>
-    <PicLeft :content="this.description"></PicLeft>
-    <PicRight
-        :title="description.title"
-        :image_input="description.image"
-        :color="description.color"
-        :description="description.description"
-        style="margin-bottom: 10px"
-    ></PicRight>
-    {{foo_content}}
-    {{this.foo_content}}
+    <MultiPanel :content="content"></MultiPanel>
   </div>
 </template>
 
 <script>
-import PicLeft from "@/components/PicLeft";
-import PicRight from "@/components/PicRight";
+
+
+
+import MultiPanel from "@/components/MultiPanel";
+
 export default {
   name: "Test",
-  components: {PicLeft, PicRight},
-  data(){
-    return{
-      description: {
-        type: "LeftPic",
-        title: "Who are we?",
-        image: "FullLogo.png",
-        color: "red lighten-2",
-        description: "Serendipity STEM is a student-led outreach community of and FIRST Tech Challenge teams in the Bay Area.",
+  components: {MultiPanel},
+  data() {
+    return {
+      content: {
+        type: "TripleView",
+        title: "Our Passion",
+        image: "Bridge.jpg",
+        color: "orange darken-2",
+        descriptions: [
+          "Although Silicon Valley is the heart of technology, Special Education students do not have the same access to STEM opportunities as General Education students.",
+          "Although Silicon Valley is the heart of technology, Special Education students do not have the same access to STEM opportunities as General Education students.",
+          "Although Silicon Valley is the heart of technology, Special Education students do not have the same access to STEM opportunities as General Education students.",
+        ],
       },
+      content_array: ["this", "little","light", "of", "mine"]
     }
-  }
+  },
 }
 </script>
 

@@ -1,0 +1,15 @@
+<template>
+  <div>
+    <p>hello world!</p>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "TripleView"
+}
+</script>
+
+<style scoped>
+
+</style>
