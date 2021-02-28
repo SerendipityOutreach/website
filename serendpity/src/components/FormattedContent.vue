@@ -3,13 +3,13 @@
   <div
       v-for="description in content_list"
       :key="description.title"
+
   >
+    <p>{{description.type}}</p>
+    <p>{{description}}</p>
     <PicLeft
         v-if="description.type === `LeftPic`"
-        :title="description.title"
-        :image_input="description.image"
-        :color="description.color"
-        :description="description.description"
+        :content="description"
         style="margin-bottom: 10px"
     ></PicLeft>
     <PicRight
@@ -31,6 +31,7 @@ export default {
   name: "FormattedContent",
   props:{
     content_list: Array,
+    max_height: String,
   },
   components: {PicRight, PicLeft}
 }

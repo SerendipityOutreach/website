@@ -13,7 +13,7 @@ const OurMission = {
     title: "Our Mission",
     image: "Bridge.jpg",
     color: "orange darken-2",
-    description: "foo",
+    description: "Although we are in the heart of Silicon valley, ",
 }
 
 const AboutContent =[

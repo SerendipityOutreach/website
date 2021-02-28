@@ -4,22 +4,22 @@
     <v-row no-gutters>
       <v-col cols="7">
         <v-card>
-          <v-img :src="require(`@/assets/img/${image_input}`)"></v-img>
+          <v-img :src="require(`@/assets/img/${this.content.image}`)"></v-img>
         </v-card>
       </v-col>
 
       <v-col>
         <v-card
-            :color="color"
+            :color="this.content.color"
             dark
             height="100%"
         >
           <v-card-title class="headline text-h3" style="flex-direction: row-reverse">
-            {{ this.title }}
+            {{ this.content.title }}
           </v-card-title>
 
           <v-card-subtitle class="headline text-h6" style="margin-top: 10px">
-            {{ this.description }}
+            {{ this.content.description }}
           </v-card-subtitle>
         </v-card>
       </v-col>
@@ -34,10 +34,7 @@ export default {
   components: {},
 
   props: {
-    image_input: String,
-    title: String,
-    description: String,
-    color: String,
+    content: Object,
   },
 
   data() {

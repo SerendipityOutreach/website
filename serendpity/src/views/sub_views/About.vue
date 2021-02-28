@@ -1,6 +1,9 @@
 <template>
   <div>
-    <FormattedAbout :content_list="AboutContent"></FormattedAbout>
+    <FormattedAbout
+        :content_list="AboutContent"
+        :max_height="`10px`"
+    ></FormattedAbout>
   </div>
 </template>
 
