@@ -6,7 +6,7 @@
 
 <script>
 import About from "@/views/sub_views/About"
-import {descriptions} from "@/assets/Descriptions";
+import {descriptions} from "@/assets/descriptions/AboutDescription";
 
 export default {
   name: 'Home',

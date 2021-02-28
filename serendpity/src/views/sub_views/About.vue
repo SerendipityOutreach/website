@@ -1,28 +1,18 @@
 <template>
   <div>
-    <div
-        v-for="description in AboutContent"
-        :key="description.title"
-    >
-      <AboutUs
-          v-if="description.type === `LeftPic`"
-          :image_input="description.image"
-          :title="description.title"
-          :description="description.description"
-      ></AboutUs>
-    </div>
+    <FormattedAbout :content_list="AboutContent"></FormattedAbout>
   </div>
 </template>
 
 <script>
-import PicLeft from "@/components/PicLeft";
-import {AboutContent} from "@/assets/Descriptions";
+import {AboutContent} from "@/assets/descriptions/AboutDescription";
+import FormattedContent from "@/components/FormattedContent";
 
 export default {
   name: 'About',
 
   components: {
-    AboutUs: PicLeft,
+    FormattedAbout: FormattedContent
   },
 
   props: {},

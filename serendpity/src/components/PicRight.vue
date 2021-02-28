@@ -1,13 +1,6 @@
 <template>
   <div>
-
     <v-row no-gutters>
-      <v-col cols="7">
-        <v-card>
-          <v-img :src="require(`@/assets/img/${image_input}`)"></v-img>
-        </v-card>
-      </v-col>
-
       <v-col>
         <v-card
             :color="color"
@@ -23,21 +16,25 @@
           </v-card-subtitle>
         </v-card>
       </v-col>
-
+      <v-col cols="7">
+        <v-card>
+          <v-img :src="require(`@/assets/img/${image_input}`)"></v-img>
+        </v-card>
+      </v-col>
     </v-row>
   </div>
 </template>
 
 <script>
 export default {
-  name: "PicLeft",
+  name: "PicRight",
   components: {},
 
   props: {
     image_input: String,
     title: String,
     description: String,
-    color: String,
+    color: String
   },
 
   data() {
