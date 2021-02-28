@@ -16,11 +16,11 @@
           style="margin-bottom: 10px"
       ></PicRight>
 
-      <TripleView
+      <MultiPanel
           v-if="description.type === `TripleView`"
           :content="description"
           style="margin-bottom: 10px"
-      ></TripleView>
+      ></MultiPanel>
     </div>
   </div>
 </template>
@@ -28,14 +28,14 @@
 <script>
 import PicLeft from "@/components/PicLeft";
 import PicRight from "@/components/PicRight";
-import TripleView from "@/components/TripleView";
+import MultiPanel from "@/components/MultiPanel";
 
 export default {
   name: "FormattedContent",
   props: {
     content_list: Array,
   },
-  components: {PicRight, PicLeft, TripleView}
+  components: {PicRight, PicLeft, MultiPanel}
 }
 </script>
 
