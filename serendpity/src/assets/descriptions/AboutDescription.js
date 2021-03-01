@@ -18,12 +18,12 @@ const OurMission = {
 const OurPassion = {
     type: "TripleView",
     title: "Our Passion",
-    image: "Bridge.jpg",
+    image: "BridgeFiltered.jpg",
+    image_length: 80, // Change this to make sure you can see the whole picture
     color: "orange darken-1",
     descriptions: [
-        "Although Silicon Valley is the heart of technology, Special Education students do not have the same access to STEM opportunities as General Education students.",
-        "Although Silicon Valley is the heart of technology, Special Education students do not have the same access to STEM opportunities as General Education students.",
-        "Although Silicon Valley is the heart of technology, Special Education students do not have the same access to STEM opportunities as General Education students.",
+        "Although Silicon Valley is the heart of technology,e same access to STEM opportunities as General Education students.",
+        "Although Silicon Valley is the heart of tdo not have the same access to STEM opportunities as General Education students.",
     ],
 
 }
