@@ -22,8 +22,10 @@ const OurPassion = {
     image_length: 80, // Change this to make sure you can see the whole picture
     color: "orange darken-1",
     descriptions: [
-        "Although Silicon Valley is the heart of technology,e same access to STEM opportunities as General Education students.",
-        "Although Silicon Valley is the heart of tdo not have the same access to STEM opportunities as General Education students.",
+        "Being part of the various FIRST Tech Challenge, Serendipity STEM help us to understand the societal application of what we learn in our robotics teams",
+        "Although Silicon Valley is the heart of technology, Special Education students do not have the same access to STEM opportunities as General Education students",
+        "By spreading not just coding--but a way of approaching life," +
+        " we can use engineering as a catalyst to bridge the gap between the STEM and Special Education community",
     ],
 
 }
