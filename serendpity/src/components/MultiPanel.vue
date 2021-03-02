@@ -26,6 +26,7 @@
               <v-card
                   class="mb-12 rounded-lg"
                   :color="content.color"
+                  height="80%"
               >
                 <v-card-subtitle class="headline text-h6 white--text" v-text="text_block"></v-card-subtitle>
               </v-card>
