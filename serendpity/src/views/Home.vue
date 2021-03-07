@@ -2,7 +2,7 @@
   <div class="pr-5">
     <v-row>
       <v-col cols="2" class="pl-1">
-        <Nav></Nav>
+        <Nav @scrollRequest="setScrollDest"></Nav>
       </v-col>
       <v-col cols="10">
 <!--         put main content here    -->
@@ -14,7 +14,6 @@
 
 <script>
 import About from "@/views/sub_views/About"
-import {descriptions} from "@/assets/descriptions/AboutDescription";
 import Nav from "@/views/Nav";
 
 export default {
@@ -29,7 +28,13 @@ export default {
 
   data() {
     return {
-      website_content: descriptions,
+      scrollDest: "About",
+    }
+  },
+  methods: {
+    setScrollDest(refDest){ //note there is literally a ref tag that's why it's called refDest
+      console.log("the scroll request dest from nav is " + refDest)
+      this.setScrollDest = refDest
     }
   }
 }

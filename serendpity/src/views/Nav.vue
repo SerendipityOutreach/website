@@ -39,6 +39,7 @@ export default {
   methods: {
     broadcastScrollSection(scrollSection){
       console.log("Broadcasting scroll section " + scrollSection)
+      this.$emit("scrollRequest", scrollSection)
     }
   }
 }
