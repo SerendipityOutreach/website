@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import goTo from 'vuetify/es5/services/goto'
 
 Vue.use(VueRouter)
 
@@ -34,13 +35,17 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes,
-  scrollBehavior: function (to){
-    if (to.hash){
-      return {
-        selector: to.hash
-      }
+  scrollBehavior: (to, from, savedPosition) => {
+    let scrollTo = 0
+
+    if (to.hash) {
+      scrollTo = to.hash
+    } else if (savedPosition) {
+      scrollTo = savedPosition.y
     }
-  }
+
+    return goTo(scrollTo)
+  },
 })
 
 document.title = "Serendipity STEM"

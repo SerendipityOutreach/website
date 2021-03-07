@@ -1,29 +1,129 @@
 <template>
   <div>
-    <router-link
-        :to="{path: '/test#whitehaven'}"
-    >
+    <v-container>
+      <v-row>
+        <v-col cols="12">
+          <h3
+              ref="radio"
+              class="headline"
+          >
+            Target
+          </h3>
+
+          <v-radio-group
+              v-model="type"
+              row
+          >
+            <v-radio
+                label="Number"
+                value="number"
+            ></v-radio>
+
+            <v-radio
+                label="Selector"
+                value="selector"
+            ></v-radio>
+
+            <v-radio
+                label="DOMElement"
+                value="element"
+            ></v-radio>
+          </v-radio-group>
+
+          <v-text-field
+              v-if="type === 'number'"
+              v-model="number"
+              label="Number"
+              type="number"
+          ></v-text-field>
+
+          <v-text-field
+              v-if="type === 'selector'"
+              v-model="selector"
+              label="Selector"
+          ></v-text-field>
+
+          <v-select
+              v-if="type === 'element'"
+              v-model="selected"
+              :items="elements"
+              label="DOMElement"
+          ></v-select>
+        </v-col>
+
+        <v-col cols="12">
+          <h3 class="headline">
+            Options
+          </h3>
+
+          <v-select
+              v-model="easing"
+              :items="easings"
+              label="Easing"
+          ></v-select>
+
+          <v-slider
+              v-model="duration"
+              label="Duration"
+              max="1000"
+              min="0"
+              thumb-label
+          ></v-slider>
+
+          <v-slider
+              v-model="offset"
+              label="Offset"
+              max="500"
+              min="-500"
+              thumb-label
+          ></v-slider>
+        </v-col>
+
+        <v-col>
+          <v-btn
+              ref="button"
+              block
+              color="primary"
+              @click="scrollToPoint"
+          >
+            scroll
+          </v-btn>
+        </v-col>
+      </v-row>
+
+    </v-container>
+<!--the bunch of random content extra-->
+    <template>
+      <div>
+        <router-link
+            :to="{path: '/test#whitehaven'}"
+        >
 
 
-    <v-btn>
-      Scroll to bottom
-    </v-btn>
-    </router-link>
-    <About></About>
-    <v-card
-        class="overflow-y-auto mx-auto"
-    max-height="100"
-        ref="text_div">
-      <div ref="descrip_para" id="post">
-        <p id="whitehaven">Whitehaven Beach is a 7 km stretch along Whitsunday Island, Australia. The island is accessible by boat,
-          seaplane & helicopter from Airlie Beach, as well as Hamilton Island. It lies across from Stockyard Beach,
-          better known as Chalkie's Beach, on Haslewood Island. The beach is known for its crystal white silica sands
-          and turquoise coloured waters. The beach has tour barbeque and camping facilities.</p>
-        <p>The beach was named and discovered in 1879 by Staff Commander EP Bedwell. 'Whitehaven' was one of the many
-          names, from the then English county of Cumberland, which Bedwell brought to the area. It followed James Cook's
-          1770 naming of the island group, the Cumberland Islands.</p>
-      </div>
-    </v-card>
+          <v-btn>
+            Scroll to bottom
+          </v-btn>
+        </router-link>
+        <About></About>
+        <v-card
+            ref="text_div"
+            class="overflow-y-auto mx-auto"
+            max-height="100">
+          <div id="post" ref="descrip_para">
+            <p id="whitehaven">Whitehaven Beach is a 7 km stretch along Whitsunday Island, Australia. The island is
+              accessible by boat,
+              seaplane & helicopter from Airlie Beach, as well as Hamilton Island. It lies across from Stockyard Beach,
+              better known as Chalkie's Beach, on Haslewood Island. The beach is known for its crystal white silica
+              sands
+              and turquoise coloured waters. The beach has tour barbeque and camping facilities.</p>
+            <p>The beach was named and discovered in 1879 by Staff Commander EP Bedwell. 'Whitehaven' was one of the
+              many
+              names, from the then English county of Cumberland, which Bedwell brought to the area. It followed James
+              Cook's
+              1770 naming of the island group, the Cumberland Islands.</p>
+          </div>
+        </v-card>
+        <p ref="target_scroll"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem ducimus error nesciunt perspiciatis praesentium reiciendis. Corporis culpa ex expedita fugit impedit incidunt molestiae molestias officiis, quas quidem suscipit totam voluptatem!</p>
 
         <div id="app">
           <v-app>
@@ -31,27 +131,28 @@
               <v-container>
                 <v-card ref="card"
                         class="overflow-y-auto mx-auto"
-                        outlined
+                        max-height="400"
                         max-width=""
-                        max-height="400">
+                        outlined>
                   <v-img
                       class="white--text align-end"
                       height="200px"
                       src="https://cdn.vuetifyjs.com/images/cards/docks.jpg">
                     <v-card-title>
                       Whitehaven Beach
-                      <v-btn
-                          class="ml-6"
-                          dark
-                          dense
-                          x-small
-                          color="red"
-                          @click="toTop">GoTo</v-btn>
+
                     </v-card-title>
                   </v-img>
+
                   <v-card-text>
-                    <p>Whitehaven Beach is a 7 km stretch along Whitsunday Island, Australia. The island is accessible by boat, seaplane & helicopter from Airlie Beach, as well as Hamilton Island. It lies across from Stockyard Beach, better known as Chalkie's Beach, on Haslewood Island. The beach is known for its crystal white silica sands and turquoise coloured waters. The beach has tour barbeque and camping facilities.</p>
-                    <p>The beach was named and discovered in 1879 by Staff Commander EP Bedwell. 'Whitehaven' was one of the many names, from the then English county of Cumberland, which Bedwell brought to the area. It followed James Cook's 1770 naming of the island group, the Cumberland Islands.</p>
+                    <p>Whitehaven Beach is a 7 km stretch along Whitsunday Island, Australia. The island is accessible
+                      by boat, seaplane & helicopter from Airlie Beach, as well as Hamilton Island. It lies across from
+                      Stockyard Beach, better known as Chalkie's Beach, on Haslewood Island. The beach is known for its
+                      crystal white silica sands and turquoise coloured waters. The beach has tour barbeque and camping
+                      facilities.</p>
+                    <p>The beach was named and discovered in 1879 by Staff Commander EP Bedwell. 'Whitehaven' was one of
+                      the many names, from the then English county of Cumberland, which Bedwell brought to the area. It
+                      followed James Cook's 1770 naming of the island group, the Cumberland Islands.</p>
                   </v-card-text>
                   <v-card-actions ref="actions">
                     <v-btn text>Button</v-btn>
@@ -62,50 +163,63 @@
           </v-app>
         </div>
 
+      </div>
+    </template>
   </div>
+
 </template>
-
 <script>
-
-
-import About from "@/views/About";
-import router from "@/router/router";
+import * as easings from 'vuetify/es5/services/goto/easing-patterns'
+import About from "@/views/sub_views/About";
 
 export default {
-  name: "Test",
-  components:{
+  components: {
     About,
   },
-  data: () => ({
-    fab: false
-  }),
-
-  methods: {
-    onScroll(e) {
-      if (typeof window !== 'undefined') {
-        const top = window.pageYOffset || e.target.scrollTop || 0
-        this.fab = top > 20
+  data() {
+    return {
+      type: 'number',
+      number: 9999,
+      selector: '#scroll-with-options',
+      selected: 'Button',
+      elements: ['Button', 'Radio group'],
+      duration: 300,
+      offset: 0,
+      easing: 'easeInOutCubic',
+      easings: Object.keys(easings),
+    }
+  },
+  methods:{
+    scrollToPoint(){
+      this.$vuetify.goTo(this.$refs.text_div, {
+        // the options
+        duration: 900,
+        offset: -300, //this is offset y
+        easing: "easeInOutCubic",
+      })
       }
-
     },
-    toTop() {
-      // this.$vuetify.goTo("scroll-target")
-      this.$vuetify.goTo(this.$refs.actions, {container: this.$refs.card});
-      // this.$vuetify.goTo(this.$r, { container: this.$refs.card });
+  computed: {
+    target() {
+      const value = this[this.type]
+      console.log("the value in target computed is " + Number (value))
+      if (!isNaN(value)) return Number(value)
+      else return value
     },
-    toBottom() {
-      // this.$vuetify.goTo("scroll-target")
-      // this.$vuetify.goTo(this.$refs.descrip_para, {container: this.$refs.text_div});
-      // this.$vuetify.goTo(this.$r, { container: this.$refs.card });
-      // router.push({path: '/post#whitehaven'})
-      console.log(router.getRoutes())
+    options() {
+      return {
+        duration: this.duration,
+        offset: this.offset,
+        easing: this.easing,
+      }
     },
-
-
-  }
+    element() {
+      if (this.selected === 'Button') return this.$refs.button
+      else if (this.selected === 'Radio group') return this.$refs.radio
+      else return null
+    },
+  },
 }
 </script>
 
-<style scoped>
 
-</style>
