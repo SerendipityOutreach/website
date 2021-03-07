@@ -3,21 +3,21 @@
 // About Page Content
 const WhoAreWe = {
     type: "LeftPic",
-    title: "Who are we?",
+    title: "Community",
     image: "FullLogo.png",
     color: "red lighten-1",
     description: "Serendipity STEM is a student-led outreach community of and FIRST Tech Challenge teams in the Bay Area.",
 }
 const OurMission = {
     type: "RightPic",
-    title: "Our Mission",
+    title: "Mission",
     image: "Brain.jpg",
     color: "blue darken-1",
     description: "Our goal is to provide sustainable STEM opportunities for Special Education students in the form of robotics and coding",
 }
 const OurPassion = {
     type: "TripleView",
-    title: "Our Passion",
+    title: "Passion",
     image: "BridgeFiltered.jpg",
     image_length: 80, // Change this to make sure you can see the whole picture
     color: "red lighten-1",

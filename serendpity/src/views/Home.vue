@@ -1,12 +1,12 @@
 <template>
   <div class="pr-5">
     <v-row>
-      <v-col cols="2">
+      <v-col cols="2" class="pl-1">
         <Nav></Nav>
       </v-col>
       <v-col cols="10">
 <!--         put main content here    -->
-        <About v-if="false"></About>
+        <About></About>
       </v-col>
     </v-row>
   </div>

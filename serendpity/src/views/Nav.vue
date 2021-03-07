@@ -1,24 +1,16 @@
 <template>
   <div>
-    <v-row>
-      <v-col cols="8">
+    <v-row class="">
+      <v-col cols="7">
         <v-timeline v-for="section in NavDescriptions" :key="section.color">
-          <div>
-            <v-timeline-item>
+          <div @click="broadcastScrollSection(section.section_name)">
+            <v-timeline-item >
               {{ section.section_name }}
-            <v-btn
-                fab
-                x-small
-                :color="section.color"
-                @click="broadcastScrollSection(section.section_name)">
-
-
-
-            </v-btn>
             </v-timeline-item>
           </div>
 
-          <div v-for="sub_section in section.content" :key="sub_section.title">
+          <div v-for="sub_section in section.content" :key="sub_section.title"
+               @click="broadcastScrollSection(sub_section.title)">
             <v-timeline-item
                 :color="section.color + ` lighten-2`"
                 small
