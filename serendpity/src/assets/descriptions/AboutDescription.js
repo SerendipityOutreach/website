@@ -29,12 +29,14 @@ const OurPassion = {
 
 }
 
-const AboutContent =[
-    WhoAreWe,
-    OurMission,
-    OurPassion,
-]
+const AboutDescription = {
+    name: "About",
+    descriptions: [
+        WhoAreWe,
+        OurMission,
+        OurPassion,
+    ]
+}
 
 
-
-export {AboutContent}
+export {AboutDescription}
