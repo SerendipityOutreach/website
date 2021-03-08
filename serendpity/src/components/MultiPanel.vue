@@ -14,7 +14,7 @@
             <v-col v-for="i in 3" :key="i" cols="4">
               <v-card :color="content.color" class="rounded-lg">
 
-                  <v-card-title v-if="i===2" class="text-h3 ml-15 text-center" v-text="content.title"></v-card-title>
+                  <v-card-title v-if="i===2" class="text-h3 ml-15 text-center" style="padding-left: 35px" v-text="content.title"></v-card-title>
 
               </v-card>
             </v-col>
