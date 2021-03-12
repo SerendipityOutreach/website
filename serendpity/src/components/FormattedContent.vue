@@ -20,6 +20,7 @@
           v-if="description.type === `TripleView`"
           :content="description"
           style="margin-bottom: 10px"
+          ref="about"
       ></MultiPanel>
 
     </div>
@@ -39,6 +40,21 @@ export default {
   },
   components: {PicRight, PicLeft, MultiPanel},
 
+  watch: {
+    navDest: function () {
+      // console.log("the navDest in Formatted content is " + this.navDest)
+      // console.log("the reference " + this.$refs.text_div)
+      console.log("fire from about navDest watcher")
+      console.log(this.$refs["about"][0])
+      this.$vuetify.goTo(this.$refs["about"][0], {
+        // the options
+        duration: 900,
+        offset: -300, //this is offset y
+        easing: "easeInOutCubic",
+      })
+
+    },
+  },
   methods: {
     // scrollTo(dest){
     //   this.$vuetify.goTo(this.$refs.text_div, {

@@ -5,6 +5,7 @@
         :navDest="navDest"
         ref=""
     ></FormattedAbout>
+    <p ref="about">1234</p>
   </div>
 </template>
 
@@ -32,15 +33,9 @@ export default {
   },
   watch: {
     navDest: function (){
-      console.log("the navDest in Formatted content is " + this.navDest)
-      console.log("the reference " + this.$refs.text_div)
-
-      this.$vuetify.goTo(this.$refs.coms, {
-        // the options
-        duration: 900,
-        offset: -300, //this is offset y
-        easing: "easeInOutCubic",
-      })
+      // console.log("the navDest in Formatted content is " + this.navDest)
+      // console.log("the reference " + this.$refs.text_div)
+      console.log("fire from about navDest watcher")
 
     }
   },

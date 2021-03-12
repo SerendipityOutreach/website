@@ -6,7 +6,8 @@
       </v-col>
       <v-col cols="10">
 <!--         put main content here    -->
-        <About :navDest="scrollDest"></About>
+        <About ref="about" :navDest="scrollDest"></About>
+        <p ref="hello">hi</p>
       </v-col>
     </v-row>
   </div>
@@ -34,7 +35,9 @@ export default {
   methods: {
     setScrollDest(refDest){ //note there is literally a ref tag that's why it's called refDest
       this.scrollDest = refDest
-      console.log("the scroll request dest from nav is " + this.scrollDest)
+      console.log("The about component")
+      console.log(this.$refs["about"])
+
     }
   }
 }
