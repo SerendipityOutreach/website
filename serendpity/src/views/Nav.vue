@@ -1,11 +1,11 @@
 <template>
   <div>
-    <v-row class="">
+    <v-row>
       <v-col cols="7">
         <v-timeline v-for="section in NavDescriptions" :key="section.color">
           <div @click="broadcastScrollSection(section.section_name)">
-            <v-timeline-item >
-              {{ section.section_name }}
+            <v-timeline-item>
+              <v-btn color="blue darken=1">{{ section.section_name }}</v-btn>
             </v-timeline-item>
           </div>
 
@@ -15,10 +15,12 @@
                 :color="section.color + ` lighten-2`"
                 small
             >
-              {{ sub_section.title }}
+              <v-btn :color="section.color + ` lighten-2`">
+                {{ sub_section.title }}
+              </v-btn>
+
             </v-timeline-item>
           </div>
-
         </v-timeline>
       </v-col>
       <v-col cols="5"></v-col>
@@ -37,7 +39,7 @@ export default {
     }
   },
   methods: {
-    broadcastScrollSection(scrollSection){
+    broadcastScrollSection(scrollSection) {
       console.log("Broadcasting scroll section " + scrollSection)
       this.$emit("scrollRequest", scrollSection)
     }

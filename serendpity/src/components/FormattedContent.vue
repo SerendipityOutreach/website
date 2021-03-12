@@ -63,14 +63,6 @@ export default {
     },
   },
   methods: {
-    // scrollTo(dest){
-    //   this.$vuetify.goTo(this.$refs.text_div, {
-    //     // the options
-    //     duration: 900,
-    //     offset: -300, //this is offset y
-    //     easing: "easeInOutCubic",
-    //   })
-    // }
   },
 }
 </script>
