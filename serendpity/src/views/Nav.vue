@@ -1,29 +1,33 @@
 <template>
-  <div>
+  <div class="pl-6 pt-3">
     <v-row>
-      <v-col cols="7">
-        <v-timeline v-for="section in NavDescriptions" :key="section.color">
-          <div @click="broadcastScrollSection(section.section_name)">
-            <v-timeline-item>
-              <v-btn color="blue darken=1">{{ section.section_name }}</v-btn>
-            </v-timeline-item>
-          </div>
+      <v-navigation-drawer
+      >
+        <div v-for="section in NavDescriptions" :key="section.color">
 
-          <div v-for="sub_section in section.content" :key="sub_section.title"
-               @click="broadcastScrollSection(sub_section.title)">
-            <v-timeline-item
-                :color="section.color + ` lighten-2`"
-                small
-            >
-              <v-btn :color="section.color + ` lighten-2`">
-                {{ sub_section.title }}
-              </v-btn>
+          <v-list
+              nav
+              dense
+          >
 
-            </v-timeline-item>
-          </div>
-        </v-timeline>
-      </v-col>
-      <v-col cols="5"></v-col>
+            <v-list-item-group v-model="list_selection">
+              <div v-for="sub_section in section.content" :key="sub_section.title"
+                   @click="broadcastScrollSection(sub_section.title)"
+              >
+                <v-list-item>
+                  <v-list-item-icon>
+
+                    <v-icon v-text="section.image"></v-icon>
+                  </v-list-item-icon>
+                  <v-list-item-title>{{ sub_section.title }}</v-list-item-title>
+                </v-list-item>
+
+
+              </div>
+            </v-list-item-group>
+          </v-list>
+        </div>
+      </v-navigation-drawer>
     </v-row>
   </div>
 </template>
@@ -35,7 +39,8 @@ export default {
   name: "Nav",
   data() {
     return {
-      NavDescriptions
+      NavDescriptions,
+      list_selection: 0,
     }
   },
   methods: {

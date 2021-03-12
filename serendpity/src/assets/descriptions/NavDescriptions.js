@@ -5,8 +5,7 @@ const NavDescriptions = [
         // About Section
         section_name: AboutDescription.name,
         content: AboutDescription.descriptions,
-        // just put a general color, the nav.vue component will take care of shading
-        color: "red",
+        image: "mdi-home-heart"
     },
     // {
     //     // Our Work Section with dummy data for now
