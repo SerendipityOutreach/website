@@ -1,7 +1,7 @@
 <template>
   <div class="pr-5">
     <v-row>
-      <v-col cols="2" class="pl-1">
+      <v-col cols="2" class="pl-1" >
         <Nav @scrollRequest="setScrollDest"></Nav>
       </v-col>
       <v-col cols="10">
