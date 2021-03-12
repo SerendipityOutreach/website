@@ -5,7 +5,6 @@
         :navDest="navDest"
         ref=""
     ></FormattedAbout>
-    <p ref="about">1234</p>
   </div>
 </template>
 

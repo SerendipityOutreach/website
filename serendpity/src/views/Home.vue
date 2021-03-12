@@ -7,7 +7,6 @@
       <v-col cols="10">
 <!--         put main content here    -->
         <About ref="about" :navDest="scrollDest"></About>
-        <p ref="hello">hi</p>
       </v-col>
     </v-row>
   </div>

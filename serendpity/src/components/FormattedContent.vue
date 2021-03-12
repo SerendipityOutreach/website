@@ -56,7 +56,7 @@ export default {
       this.$vuetify.goTo(this.$refs[this.navDest][0], {
         // the options
         duration: 900,
-        offset: -300, //this is offset y
+        offset: 0, //this is offset y
         easing: "easeInOutCubic",
       })
 
