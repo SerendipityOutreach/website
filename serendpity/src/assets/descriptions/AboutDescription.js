@@ -6,7 +6,7 @@ const WhoAreWe = {
     title: "Community",
     image: "FullLogo.png",
     color: "red lighten-1",
-    description: "Serendipity STEM is a student-led outreach community of and FIRST Tech Challenge teams in the Bay Area.",
+    description: "Serendipity STEM is a student-led outreach community of and FIRST Tech Challenge teams in the Bay Area",
 }
 const OurMission = {
     type: "RightPic",

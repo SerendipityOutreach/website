@@ -34,6 +34,7 @@
 import PicLeft from "@/components/PicLeft";
 import PicRight from "@/components/PicRight";
 import MultiPanel from "@/components/MultiPanel";
+import {myScrollTo} from "@/ScrollTo";
 
 export default {
   name: "FormattedContent",
@@ -52,13 +53,15 @@ export default {
     navDest: function () {
       // console.log("the navDest in Formatted content is " + this.navDest)
       // console.log("the reference " + this.$refs.text_div)
+      console.log("Navdest changed btw")
       console.log(this.$refs[this.navDest][0])
-      this.$vuetify.goTo(this.$refs[this.navDest][0], {
-        // the options
-        duration: 900,
-        offset: 0, //this is offset y
-        easing: "easeInOutCubic",
-      })
+      // this.$vuetify.goTo(this.$refs[this.navDest][0], {
+      //   // the options
+      //   duration: 900,
+      //   offset: 0, //this is offset y
+      //   easing: "easeInOutCubic",
+      // })
+      myScrollTo(this.$vuetify, this.$refs, this.navDest)
 
     },
   },
