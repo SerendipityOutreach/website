@@ -49,7 +49,7 @@ export default {
   },
   components: {PicRight, PicLeft, MultiPanel},
 
-  watch: {
+  watch: { //todo turn this into the nav function where the nav clicks, fires a nav dest and then does the go to in the formatted about
     navDest: function () {
       // console.log("the navDest in Formatted content is " + this.navDest)
       // console.log("the reference " + this.$refs.text_div)
